@@ -1,4 +1,4 @@
-package hw;
+fc dpackage hw;
 
 import java.util.Arrays;
 
@@ -30,7 +30,7 @@ public class Main {
     //TODO print you are buing XX items for YY dollars
 
     //TODO loop back to line 8
-    
+
   }
 
 }

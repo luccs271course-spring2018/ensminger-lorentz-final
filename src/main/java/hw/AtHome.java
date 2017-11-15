@@ -1,7 +1,7 @@
 package hw;
 
-public class HelloWorld {
+public class AtHome {
 
   public String getMessage() {
-    
+
 }
