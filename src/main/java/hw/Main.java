@@ -9,8 +9,10 @@ public class Main {
     //Creates a priority queue that is typed string and integer
     PriorityQueue<Map.entry<String,Integer>> storage = new PriorityQueue<>(new DescendingByPriority());
     PriorityQueue<Map.entry<String,Integer>> filledStorage = new PriorityQueue<>(new DescendingByPriority());
+    HashMap<String, Integer> price = new HashMap<String, Integer>();
+
     //TODO ask the user if they want to add or remove products to the list (Home or store)
-    filledStorage = AtHome.fillQueue(storage);
+    filledStorage = AtHome.fillQueue(storage, price);
     //TODO add an option to run without a price field
 
     //IF ADD
