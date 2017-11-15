@@ -1,15 +1,20 @@
 fc dpackage hw;
 
 import java.util.Arrays;
+import java.utils.*;
 
 public class Main {
 
   public static void main(final String[] args) {
+    //Creates a priority queue that is typed string and integer
+    PriorityQueue<Map.entry<String,Integer>> storage = new PriorityQueue<>(new DescendingByPriority());
     //TODO ask the user if they want to add or remove products to the list (Home or store)
-
+    AtHome.fillQueue(storage);
     //TODO add an option to run without a price field
+
     //IF ADD
     //TODO create a prioritized queue that will act as the main data structure
+
     //TODO create a hashmap that can hold the value of each items
     //TODO when adding items to the prioritized queue ask for the priority and add to the queue then ask the price and add the value to the hashmap
     //TODO ask user if they have a next item to add
