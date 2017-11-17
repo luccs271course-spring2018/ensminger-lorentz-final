@@ -1,4 +1,4 @@
-fc dpackage hw;
+package hw;
 
 import java.util.Arrays;
 import java.utils.*;

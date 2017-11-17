@@ -3,13 +3,13 @@ package hw;
 import java.util.*;
 
 public class AtStore {
-private Map<String, Double> prices = new HashMap<String, Double>;
+private Map<String, Double> prices = new HashMap<String, Double>();
 
 
 public void remove(PriorityQueue Q){
     final String done = "done";
     Scanner scanner = new Scanner(System.in);
-    while(!scanner.next().equalsIgnoreCase(done))){
+    while(!scanner.next().equalsIgnoreCase(done)){
         System.out.println("Would you liked to remove the next item?");
         System.out.println("Yes/No");
         if(scanner.nextLine.equalsIgnoreCase("yes")){
@@ -20,8 +20,8 @@ public void remove(PriorityQueue Q){
             prices.put(item, price);
             prices.calculateTotal();
         }
-        if(scanner.nextLine().equalsIgnoreCase("no"){
-            
+        if(scanner.nextLine().equalsIgnoreCase("no")){
+
         }
     }
 }
@@ -36,5 +36,6 @@ public double calulateTotal(){
 }
 //TOdo ask if user is ready to start trip
 //TODO prompt user what item they picked up then ask for the price
-//TODO place both the item as the 
+//TODO place both the item as the
 //TODO iterte through the map and total the shopping trip
+}
