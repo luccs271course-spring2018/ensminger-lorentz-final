@@ -8,6 +8,7 @@ private Map<String, Double> prices = new HashMap<String, Double>();
 
 public void remove(PriorityQueue Q){
     final String done = "done";
+    double cost = 0;
     Scanner scanner = new Scanner(System.in);
     while(!scanner.next().equalsIgnoreCase(done)){
         System.out.println("Would you liked to remove the next item?");
@@ -18,10 +19,15 @@ public void remove(PriorityQueue Q){
             System.out.println("what is the price of this item?");
             double price = scanner.nextLine();
             prices.put(item, price);
-            prices.calculateTotal();
+            cost = prices.calculateTotal();
+            System.out.println(cost);
         }
-        if(scanner.nextLine().equalsIgnoreCase("no")){
-
+        else if(scanner.nextLine().equalsIgnoreCase("no")){
+            System.out.println("If your trip is finished enter done");
+            cost = prices.calculateTotal();
+            Q.clear;
+            System.out.println(cost);
+            //prices.printReciept();
         }
     }
 }
@@ -34,8 +40,19 @@ public double calulateTotal(){
     }
     return total;
 }
+public void printReceipt(){
+    System.out.println("Here is a receipt for your trip:");
+    for(String n : prices.keySet())
+    {
+        String item = n.toString();
+        Double price = prices.get(n).toString();
+        System.out.println(item + "   " + price);
+        
+    }
+}
 //TOdo ask if user is ready to start trip
 //TODO prompt user what item they picked up then ask for the price
 //TODO place both the item as the
 //TODO iterte through the map and total the shopping trip
+//TODO receipt print method
 }
