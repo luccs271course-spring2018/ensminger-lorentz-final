@@ -11,6 +11,10 @@ public class Main {
     PriorityQueue<Map.entry<String,Integer>> filledStorage = new PriorityQueue<>(new DescendingByPriority());
     //TODO ask the user if they want to add or remove products to the list (Home or store)
     filledStorage = AtHome.fillQueue(storage);
+    while(filledStorage.hasNext()){
+      AtStore.remove(filledStorage);
+    }
+    AtStore.printReceipt();
     //TODO add an option to run without a price field
 
     //IF ADD
