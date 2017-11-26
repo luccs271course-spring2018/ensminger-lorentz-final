@@ -1,6 +1,6 @@
 package hw;
 
-import java.utils.*;
+import java.util.*;
 
 public class AtHome {
 

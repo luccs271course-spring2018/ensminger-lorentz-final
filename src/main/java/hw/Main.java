@@ -1,14 +1,14 @@
 package hw;
 
 import java.util.Arrays;
-import java.utils.*;
+import java.util.*;
 
 public class Main {
 
   public static void main(final String[] args) {
     //Creates a priority queue that is typed string and integer
-    PriorityQueue<Map.entry<String,Integer>> storage = new PriorityQueue<>(new DescendingByPriority());
-    PriorityQueue<Map.entry<String,Integer>> filledStorage = new PriorityQueue<>(new DescendingByPriority());
+    PriorityQueue<Map.entry<String,Integer>> storage = new PriorityQueue<>(1, DescendingByPriority());
+    PriorityQueue<Map.entry<String,Integer>> filledStorage = new PriorityQueue<>(1, DescendingByPriority());
     //TODO ask the user if they want to add or remove products to the list (Home or store)
     filledStorage = AtHome.fillQueue(storage);
     while(filledStorage.hasNext()){

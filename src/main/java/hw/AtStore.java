@@ -25,7 +25,7 @@ public void remove(PriorityQueue Q){
         else if(scanner.nextLine().equalsIgnoreCase("no")){
             System.out.println("If your trip is finished enter done");
             cost = prices.calculateTotal();
-            Q.clear;
+            Q.clear();
             System.out.println(cost);
             //prices.printReciept();
         }
@@ -47,7 +47,7 @@ public void printReceipt(){
         String item = n.toString();
         Double price = prices.get(n).toString();
         System.out.println(item + "   " + price);
-        
+
     }
 }
 //TOdo ask if user is ready to start trip
