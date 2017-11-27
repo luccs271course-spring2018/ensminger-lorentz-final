@@ -12,11 +12,11 @@ public class AtStore {
     Scanner scanner = new Scanner(System.in);
 
     while (!scanner.nextLine().equalsIgnoreCase(done)) {
-      String response = scanner.nextLine();
+
       System.out.println("Would you liked to remove the next item?");
       System.out.println("Yes/No");
 
-      if (response.equalsIgnoreCase("yes")) {
+      if (scanner.nextLine().equalsIgnoreCase("yes")) {
         Map.Entry<String, Integer> temp = Q.poll();
         String item = temp.getKey();
         System.out.println("what is the price of this item?");
@@ -24,7 +24,7 @@ public class AtStore {
         prices.put(item, price);
         cost = calculateTotal();
         System.out.println(cost);
-      } else if (response.equalsIgnoreCase("no")) {
+      } else if (scanner.nextLine().equalsIgnoreCase("no")) {
         System.out.println("If your trip is finished enter done");
         cost = calculateTotal();
         Q.clear();

@@ -18,7 +18,7 @@ public class Main {
 
     filledStorage = Home.fillQueue(storage);
 
-    while (filledStorage.size() > 1) {
+    while (filledStorage.size() >= 1) {
       Store.remove(filledStorage);
     }
 
