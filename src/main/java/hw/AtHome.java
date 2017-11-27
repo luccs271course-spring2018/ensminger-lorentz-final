@@ -56,6 +56,6 @@ public class AtHome {
     // makes a map.entry type object without that whole class, and then adds it to the queue
     storage.add(new AbstractMap.SimpleEntry<String, Integer>(product, priority));
     // returns the updated queue
-    // return storage;
+    return storage;
   }
 }
