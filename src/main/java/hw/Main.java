@@ -15,7 +15,7 @@ public class Main {
     AtHome Home = new AtHome();
     // TODO ask the user if they want to add or remove products to the list (Home or store)
     filledStorage = Home.fillQueue(storage);
-
+    System.out.println("john was here");
     while (filledStorage.peek() != null) {
       Store.remove(filledStorage);
     }

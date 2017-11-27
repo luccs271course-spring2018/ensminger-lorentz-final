@@ -27,10 +27,11 @@ public class AtHome {
         storage = addTo(storage);
       } else if (input.nextLine().equalsIgnoreCase("no")) {
         System.out.println("Enter exit to quit the addition part of the program");
+      } else if (input.nextLine().equalsIgnoreCase("exit")) {
+        System.out.println("exit");
+        done = true;
+        break;
       }
-      done = true;
-      System.out.println("hi");
-      input.nextLine();
     }
     return storage;
     // IF ADD
@@ -56,6 +57,6 @@ public class AtHome {
     // makes a map.entry type object without that whole class, and then adds it to the queue
     storage.add(new AbstractMap.SimpleEntry<String, Integer>(product, priority));
     // returns the updated queue
-    // return storage;
+    return storage;
   }
 }
