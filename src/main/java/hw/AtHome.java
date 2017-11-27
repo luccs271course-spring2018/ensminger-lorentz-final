@@ -33,7 +33,7 @@ public class AtHome {
       }
 
       System.out.println("hi");
-      input.nextLine();
+      // input.nextLine();
     }
     return storage;
     // IF ADD
