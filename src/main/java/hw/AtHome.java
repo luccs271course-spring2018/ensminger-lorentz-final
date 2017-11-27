@@ -8,7 +8,7 @@ public class AtHome {
     final String quit = "exit";
 
     Scanner input = new Scanner(System.in);
-    while(!input.nextLine().equalsIgnorestorage = addTo(storage);Case(quit))
+    while(input.nextLine().equalsIgnoreCase(quit))
     {
       System.out.println("Would you like to add a new item? (yes/no)");
       if(input.nextLine().equalsIgnoreCase("yes")){
