@@ -21,14 +21,17 @@ public class AtHome {
 
     }*/
     boolean done = false;
+    System.out.println("Would you like to add a new item? (yes/no)");
     while (!done) {
-      System.out.println("Would you like to add a new item? (yes/no)");
+      System.out.println("Another one? (yes/no)");
       if (input.nextLine().equalsIgnoreCase("yes")) {
         storage = addTo(storage);
+
       } else if (input.nextLine().equalsIgnoreCase("no")) {
         System.out.println("Enter exit to quit the addition part of the program");
+        done = true;
       }
-      done = true;
+
       System.out.println("hi");
       input.nextLine();
     }

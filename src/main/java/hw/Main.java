@@ -13,13 +13,17 @@ public class Main {
         new PriorityQueue<>(1, new DescendingByPriority());
     AtStore Store = new AtStore();
     AtHome Home = new AtHome();
+
     // TODO ask the user if they want to add or remove products to the list (Home or store)
+
     filledStorage = Home.fillQueue(storage);
 
-    while (filledStorage.peek() != null) {
+    while (filledStorage.size() > 1) {
       Store.remove(filledStorage);
     }
+
     Store.printReceipt();
+
     // TODO add an option to run without a price field
 
     // IF ADD
