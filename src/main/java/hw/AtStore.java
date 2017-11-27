@@ -2,22 +2,23 @@ package hw;
 
 import java.util.*;
 
+
 public class AtStore {
 private Map<String, Double> prices = new HashMap<String, Double>();
 
 
-public void remove(PriorityQueue Q){
+public void remove(PriorityQueue<Map.Entry<String,Integer>> Q){
     final String done = "done";
     double cost = 0;
     Scanner scanner = new Scanner(System.in);
     while(!scanner.next().equalsIgnoreCase(done)){
         System.out.println("Would you liked to remove the next item?");
         System.out.println("Yes/No");
-        if(scanner.nextLine.equalsIgnoreCase("yes")){
-            map.entry<String, Integer> temp = Q.poll;
+        if(scanner.nextLine().equalsIgnoreCase("yes")){
+            Map.Entry<String, Integer> temp = Q.poll();
             String item = temp.getKey();
             System.out.println("what is the price of this item?");
-            double price = scanner.nextLine();
+            double price = scanner.nextDouble();
             prices.put(item, price);
             cost = prices.calculateTotal();
             System.out.println(cost);
@@ -27,15 +28,16 @@ public void remove(PriorityQueue Q){
             cost = prices.calculateTotal();
             Q.clear();
             System.out.println(cost);
+
             //prices.printReciept();
         }
     }
 }
-public double calulateTotal(){
-    Iterator<Entry<String, Double>> iter = prices.entrySet().iterator();
+public double calculateTotal(){
+    Iterator<Map.Entry<String, Double>> iter = prices.entrySet().iterator();
     double total = 0;
     while(iter.hasNext()){
-        final Entry<String, Double> entry= iter.next();
+        final Map.Entry<String, Double> entry= iter.next();
         total = total + entry.getValue();
     }
     return total;
@@ -45,7 +47,7 @@ public void printReceipt(){
     for(String n : prices.keySet())
     {
         String item = n.toString();
-        Double price = prices.get(n).toString();
+        Double price = prices.get(n);
         System.out.println(item + "   " + price);
 
     }

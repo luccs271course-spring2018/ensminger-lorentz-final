@@ -4,16 +4,17 @@ import java.util.*;
 
 public class AtHome {
 
-  public PriorityQueue<Map.entry<String,Integer>> fillQueue(PriorityQueue<Map.entry<String,Integer>> storage) {
+  public PriorityQueue<Map.Entry<String,Integer>> fillQueue(PriorityQueue<Map.Entry<String,Integer>> storage) {
     final String quit = "exit";
-    Scanner input = new Scanner(System.in());
-    while(!input.nextLine().equalsIgnoreCase(quit))
+
+    Scanner input = new Scanner(System.in);
+    while(!input.nextLine().equalsIgnorestorage = addTo(storage);Case(quit))
     {
       System.out.println("Would you like to add a new item? (yes/no)");
       if(input.nextLine().equalsIgnoreCase("yes")){
         storage = addTo(storage);
       }
-      else if(input.nextLine().equalsIgnoreCasr("no")){
+      else if(input.nextLine().equalsIgnoreCase("no")){
         System.out.println("Enter exit to quit the addition part of the program");
       }
       //put this here to avoid infinite loop may not be nessecary
@@ -31,7 +32,8 @@ public class AtHome {
 
   }
 
-  public PriorityQueue<Map.entry<String,Integer>> addTo(PriorityQueue<Map.entry<String,Integer>> storage){
+  public PriorityQueue<Map.Entry<String,Integer>> addTo(PriorityQueue<Map.Entry<String,Integer>> storage){
+    Scanner input = new Scanner(System.in);
     //takes in and stores the name of the product in a variable
     System.out.print("Enter the name of the product you need to purchase: ");
     String product = input.nextLine();
