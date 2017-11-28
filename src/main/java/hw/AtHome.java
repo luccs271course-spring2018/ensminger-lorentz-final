@@ -10,30 +10,27 @@ public class AtHome {
 
     Scanner input = new Scanner(System.in);
 
-   
-
     boolean done = false;
-    //System.out.println("Would you like to add a new item? (yes/no)");
+    // System.out.println("Would you like to add a new item? (yes/no)");
     do {
       System.out.println("Would you like to add a new item? (yes/no)");
       String response = input.nextLine();
 
       if (response.equalsIgnoreCase("yes")) {
 
-      
-      // define input variable
-      //get rid of all the next lines
-      
+        // define input variable
+        // get rid of all the next lines
+
         storage = addTo(storage);
         System.out.println("successful addition");
       } else if (response.equalsIgnoreCase("no")) {
-        //System.out.println("Enter exit to quit the addition part of the program");
+        System.out.println("Enter exit to quit the addition part of the program");
         done = true;
       }
 
-      //System.out.println("Another one? (yes/no)");
-    }while (done == false)
-   // System.out.println("You are leaving the addition segment, confirm by typing okay");
+      // System.out.println("Another one? (yes/no)");
+    } while (done == false);
+    // System.out.println("You are leaving the addition segment, confirm by typing okay");
     return storage;
     // IF ADD
     // TODO  DONE create a prioritized queue that will act as the main data structure
