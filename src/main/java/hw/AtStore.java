@@ -13,15 +13,14 @@ public class AtStore {
 
     while (!scanner.nextLine().equalsIgnoreCase(done)) {
 
-      System.out.println("Would you liked to remove the next item?");
+      System.out.println("Would you liked to remove the next item ?");
       System.out.println("Yes/No");
       String input = scanner.nextLine();
-
       if (input.equalsIgnoreCase("yes")) {
         if (Q.peek() != null) {
           Map.Entry<String, Integer> temp = Q.poll();
           String item = temp.getKey();
-          System.out.println("what is the price of this item?");
+          System.out.println("what is the price of " + item + " ?");
           double price = scanner.nextDouble();
           prices.put(item, price);
           cost = calculateTotal();
@@ -39,6 +38,8 @@ public class AtStore {
         System.out.println("The total is " + cost);
 
         printReceipt();
+      } else if (input.equalsIgnoreCase("quit")) {
+        break;
       }
     }
   }
