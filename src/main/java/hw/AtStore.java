@@ -15,22 +15,30 @@ public class AtStore {
 
       System.out.println("Would you liked to remove the next item?");
       System.out.println("Yes/No");
+      String input = scanner.nextLine();
 
-      if (scanner.nextLine().equalsIgnoreCase("yes")) {
-        Map.Entry<String, Integer> temp = Q.poll();
-        String item = temp.getKey();
-        System.out.println("what is the price of this item?");
-        double price = scanner.nextDouble();
-        prices.put(item, price);
-        cost = calculateTotal();
-        System.out.println(cost);
-      } else if (scanner.nextLine().equalsIgnoreCase("no")) {
-        System.out.println("If your trip is finished enter done");
+      if (input.equalsIgnoreCase("yes")) {
+        if (Q.peek() != null) {
+          Map.Entry<String, Integer> temp = Q.poll();
+          String item = temp.getKey();
+          System.out.println("what is the price of this item?");
+          double price = scanner.nextDouble();
+          prices.put(item, price);
+          cost = calculateTotal();
+          System.out.println(cost);
+        } else {
+          System.out.println("The list is already empty");
+          System.out.println("Your trip is finsihed");
+          System.out.println("The total is " + cost);
+          printReceipt();
+        }
+      } else if (input.equalsIgnoreCase("no")) {
+        System.out.println("Your trip is finsihed");
         cost = calculateTotal();
         Q.clear();
-        System.out.println(cost);
+        System.out.println("The total is " + cost);
 
-        // prices.printReciept();
+        printReceipt();
       }
     }
   }

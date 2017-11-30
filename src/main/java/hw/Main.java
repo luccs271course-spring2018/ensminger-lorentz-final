@@ -14,15 +14,14 @@ public class Main {
     AtStore Store = new AtStore();
     AtHome Home = new AtHome();
 
-    // TODO ask the user if they want to add or remove products to the list (Home or store)
-
+    // TODO ask the user if they want to add or remove products to the list (Home or sto
     filledStorage = Home.fillQueue(storage);
 
     while (filledStorage.size() >= 1) {
       Store.remove(filledStorage);
     }
 
-    Store.printReceipt();
+    // Store.printReceipt();
 
     // TODO add an option to run without a price field
 
